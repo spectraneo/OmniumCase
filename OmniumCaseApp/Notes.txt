@@ -1,0 +1,20 @@
+Installed packages: 
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet tool install --global dotnet-ef
+dotnet tool update --global dotnet-ef
+
+dotnet ef migrations add AddDiscriminator
+
+Create schema 
+dotnet ef migrations add InitialCreate
+
+---------------------------------------------------------------------------------
+for Tests: 
+dotnet new xunit -n OmniumCase.Tests
+dotnet sln add OmniumCase.Tests
+cd OmniumCase.Tests
+dotnet add reference ../OmniumCaseApp/OmniumCaseApp.csproj
+
+dotnet add package Moq
