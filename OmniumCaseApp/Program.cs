@@ -19,6 +19,10 @@ if (order != null)
 {
     Console.WriteLine($"Task 4 - GetOrderByOrderId(19): {order.CustomerName}");
 }
+else
+{
+    Console.WriteLine("Task 4 - Order not found.");
+}
 
 // Task 5 - GetOrdersByCustomerId
 var customerOrders = service.GetOrdersByCustomerId(101);
